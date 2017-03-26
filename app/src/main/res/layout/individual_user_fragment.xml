@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:weightSum="100"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
 
     <!-- Top half layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
-        android:weightSum="100"
         android:orientation="horizontal"
-        >
+        android:weightSum="100">
 
         <ImageView
             android:id="@+id/individual_frag_picture"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="50"
+            android:scaleType="fitXY"
             />
 
         <RelativeLayout
             android:id="@+id/individual_frag_top_right_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="50"
-            >
+            android:layout_weight="50">
 
             <TextView
+                android:id="@+id/individual_frag_name_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="8dp"
+                android:layout_alignParentTop="true"
                 android:layout_marginBottom="8dp"
-                android:paddingBottom="16dp"
+                android:layout_marginTop="40dp"
                 android:gravity="center"
+                android:paddingBottom="16dp"
                 android:text="NAME"
-                android:textStyle="bold"
                 android:textSize="30sp"
-                android:id="@+id/individual_frag_name_tv"
-                />
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/individual_frag_dob_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/individual_frag_dob_tv"
-                android:text="30 years old"
-                android:gravity="center"
                 android:layout_below="@+id/individual_frag_name_tv"
-                android:textSize="24sp"
-                />
+                android:gravity="center"
+                android:text="30 years old"
+                android:textSize="24sp" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -58,55 +56,50 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/LightGrey"
-        />
+        android:background="@color/LightGrey" />
+
     <!-- Bottom half layout -->
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/individual_frag_bottom_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="50"
-        android:id="@+id/individual_frag_bottom_layout"
+        android:orientation="vertical"
         android:paddingEnd="16dp"
-        android:paddingStart="16dp"
-        >
+        android:paddingStart="16dp">
 
         <!-- Address layout -->
         <LinearLayout
             android:id="@+id/individual_frag_location_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="100"
             android:layout_marginTop="8dp"
-            >
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
-                android:text="Address:"
                 android:gravity="start"
-                />
+                android:text="Address:" />
 
             <TextView
+                android:id="@+id/individual_frag_address_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="75"
-                android:text="123 fake st"
                 android:gravity="end"
-                android:id="@+id/individual_frag_address_tv"
-                />
+                android:text="123 fake st" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/LightGrey"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            />
+            android:layout_marginTop="8dp"
+            android:background="@color/LightGrey" />
 
         <!-- Phone layout -->
         <LinearLayout
@@ -114,35 +107,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="100"
-            >
+            android:weightSum="100">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
-                android:text="Phone:"
                 android:gravity="start"
-                />
+                android:text="Phone:" />
 
             <TextView
+                android:id="@+id/individual_frag_phone_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="75"
-                android:text="1111111111"
                 android:gravity="end"
-                android:id="@+id/individual_frag_phone_tv"
-                />
+                android:text="1111111111" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/LightGrey"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
-            />
+            android:layout_marginTop="8dp"
+            android:background="@color/LightGrey" />
 
         <!-- Email layout -->
         <LinearLayout
@@ -150,25 +139,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="100"
-            >
+            android:weightSum="100">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="25"
-                android:text="Email:"
                 android:gravity="start"
-                />
+                android:text="Email:" />
 
             <TextView
+                android:id="@+id/individual_frag_email_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="75"
-                android:text="bob@bob.com"
                 android:gravity="end"
-                android:id="@+id/individual_frag_email_tv"
-                />
+                android:text="bob@bob.com" />
 
         </LinearLayout>
 
