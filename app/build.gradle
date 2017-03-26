@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'realm-android'
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -16,6 +22,16 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dependencies {
+        //My Utilities library
+        compile 'com.github.PGMacDesign:PGMacUtilities:0.0.10@aar'
+        //Required for my library to function properly atm
+        compile 'com.jaredrummler:animated-svg-view:1.0.0'
+        //Multidex support
+        compile 'com.android.support:multidex:1.0.1'
+        //Recyclerview
+        compile 'com.android.support:recyclerview-v7:25.2.0'
     }
 }
 

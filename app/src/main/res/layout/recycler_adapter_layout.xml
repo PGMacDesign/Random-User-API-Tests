@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/recycler_adapter_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true">
+
+
+        <ImageView
+            android:id="@+id/recycler_adapter_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:clickable="false"
+            android:src="@color/Semi_Transparent3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toEndOf="@+id/recycler_adapter_iv"
+            android:layout_toRightOf="@+id/recycler_adapter_iv"
+            android:orientation="vertical"
+            android:clickable="false"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/recycler_adapter_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center|bottom"
+                android:layout_weight="50"
+                android:paddingBottom="1dp"
+                android:paddingTop="4dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/recycler_adapter_tv2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center|bottom"
+                android:layout_weight="50"
+                android:paddingBottom="4dp"
+                android:paddingTop="1dp"
+                android:textSize="13sp"
+                android:clickable="false"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/recycler_adapter_main_layout"
+        android:background="@color/LightGrey" />
+
+</RelativeLayout>
