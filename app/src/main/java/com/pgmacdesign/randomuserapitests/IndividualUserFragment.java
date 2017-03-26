@@ -16,6 +16,7 @@ import com.pgmacdesign.pgmacutilities.utilities.ImageUtilities;
 import com.pgmacdesign.pgmacutilities.utilities.L;
 import com.pgmacdesign.pgmacutilities.utilities.StringUtilities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -104,6 +105,7 @@ public class IndividualUserFragment extends android.support.v4.app.Fragment{
         try {
             Date date = DateUtilities.convertStringToDate(
                     dob, PGMacUtilitiesConstants.DATE_YYYY_MM_DD, " ", Locale.US);
+            SimpleDateFormat sdo = new SimpleDateFormat(Constants.DATE_FORMAT);
             int age = DateUtilities.getAge(date);
             individual_frag_dob_tv.setText(age + " years old");
         } catch (Exception e){
